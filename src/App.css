@@ -1,3 +1,5 @@
+/* -- DEFAULT LAYOUTS FROM BOILERPLATE -- */
+
 .App {
   text-align: center;
 }
@@ -17,7 +19,7 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -35,4 +37,148 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* -- MY STYLING -- */
+
+/* -- MY STYLING -- */
+
+/* -- COLOURS */
+/* OFF WHITE - FEF8EB */
+/* RED - 850000 */
+/* BLUE - 36558F */
+/* BLACK - 141414 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* display: flex; */
+  font-family: 'Special Elite', sans-serif;
+  padding: 20px;
+  background-color: #fef8eb;
+}
+
+.main-div {
+  text-align: center;
+}
+
+.main-div h1 {
+  margin-bottom: 20px;
+}
+
+.sections-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.heading {
+  font-family: 'Special Elite', sans-serif;
+  font-size: 60px;
+  color: rgb(133, 0, 0);
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.encoded-heading,
+.encoded-numbers {
+  font-family: 'Special Elite', sans-serif;
+  margin: 10px;
+}
+
+.encrypted-message {
+  background-color: #36558f;
+  color: white;
+  font-family: 'Special Elite', sans-serif;
+  margin: 10px;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* -- NAV -- */
+.heading-nav {
+  font-family: 'Special Elite', sans-serif;
+  font-size: 40px;
+  color: rgb(133, 0, 0);
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.encoded-nav {
+  flex-direction: row;
+  text-align: center;
+  margin: 20px;
+  flex: 3;
+}
+.ul-nav {
+  display: flex;
+}
+
+/* Individual sections */
+.encryption-flex,
+.decryption-flex {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 400px;
+  margin: 20px;
+}
+option,
+select,
+input {
+  font-size: 15px;
+  font-family: 'Special Elite', sans-serif;
+  margin: 20px;
+}
+.form {
+  font-size: 15px;
+  font-family: 'Special Elite', sans-serif;
+  margin: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin: 20px;
+  font-family: 'Special Elite', sans-serif;
+  color: rgb(133, 0, 0);
+}
+
+h3 {
+  margin-top: 10px;
+  font-family: 'Special Elite', sans-serif;
+}
+
+h4 {
+  margin: 10px 0;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+  font-size: 30px;
+}
+
+.component-inner-title {
+  font-size: 30px;
+  margin: 20px;
 }
