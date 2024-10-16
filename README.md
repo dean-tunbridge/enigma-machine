@@ -1,5 +1,5 @@
 
-# Recreating the enigma machine form world war 2
+# Recreating the enigma machine from world war 2
 
 A detailed breakdown of the project in a blog format can be found at the below link:
 
