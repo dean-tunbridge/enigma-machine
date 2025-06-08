@@ -243,7 +243,7 @@ function Encrypt() {
   // --  CRYPTID ROTOR ORDER -- //
 
   const rotorOrder = {
-    bigfoot: [
+    A: [
       messageEncode,
       rotorOne,
       rotorTwo,
@@ -263,7 +263,7 @@ function Encrypt() {
       rotorOne,
       encodedMessage,
     ],
-    mothman: [
+    C: [
       messageEncode,
       rotorFour,
       rotorFive,
@@ -273,7 +273,7 @@ function Encrypt() {
       rotorOne,
       encodedMessage,
     ],
-    chupacabra: [
+    D: [
       messageEncode,
       rotorTwo,
       rotorFour,
@@ -288,7 +288,7 @@ function Encrypt() {
   // -- USE STATE -- //
   const [order, setOrder] = useState([])
   const [message, setMessage] = useState('')
-  const [cryptid, setCryptid] = useState('bigfoot')
+  const [cryptid, setCryptid] = useState('A')
   const [submitted, isSubmitted] = useState(false)
 
   function updateMessage(newMessage) {
@@ -338,10 +338,10 @@ function Encrypt() {
                   className="encoded-numbers"
                   value={cryptid}
                   onChange={handleChange}>
-                  <option value="bigfoot">Bigfoot</option>
-                  <option value="nessie">Loch Ness Monster</option>
-                  <option value="mothman">Mothman</option>
-                  <option value="chupacabra">Chupacabra</option>
+                  <option value="A">A</option>
+                  <option value="nessie">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
                 </select>
               </label>
               <input type="submit" value="Select" />

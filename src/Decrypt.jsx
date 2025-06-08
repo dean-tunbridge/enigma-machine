@@ -286,10 +286,10 @@ function Decrypt() {
   const rotorSixReverse = Object.fromEntries(rotorSixObj)
   const encodedMessageReverse = Object.fromEntries(encodeObj)
 
-  // --  CRYPTID ROTOR ORDER -- //
+  // -- ROTOR ORDER -- //
 
   const rotorOrder = {
-    bigfoot: [
+    A: [
       encodedMessageReverse,
       rotorOneReverse,
       rotorTwoReverse,
@@ -309,7 +309,7 @@ function Decrypt() {
       rotorOneReverse,
       messageEncodeReverse,
     ],
-    mothman: [
+    C: [
       encodedMessageReverse,
       rotorFourReverse,
       rotorFiveReverse,
@@ -319,7 +319,7 @@ function Decrypt() {
       rotorOneReverse,
       messageEncodeReverse,
     ],
-    chupacabra: [
+    D: [
       encodedMessageReverse,
       rotorTwoReverse,
       rotorFourReverse,
@@ -332,7 +332,7 @@ function Decrypt() {
   }
 
   // -- USE STATE -- //
-  const [cryptid, setCryptid] = useState('bigfoot')
+  const [cryptid, setCryptid] = useState('A')
   const [order, setOrder] = useState([])
   const [message, setMessage] = useState('')
   const [submitted, isSubmitted] = useState(false)
@@ -377,19 +377,17 @@ function Decrypt() {
             <h2 className="component-inner-title">Decrypting message</h2>
             <form onSubmit={handleSubmit}>
               <label>
-                <h4 className="encoded-heading">
-                  Enter the super secret password:
-                </h4>
-                <select value={cryptid} onChange={handleChange}>
-                  <option value="bigfoot">Bigfoot</option>
-                  <option value="nessie">Loch Ness Monster</option>
-                  <option value="mothman">Mothman</option>
-                  <option value="chupacabra">Chupacabra</option>
+                <h4 className="encoded-heading">Select rotor order:</h4>
+                <select value={rotorOrder} onChange={handleChange}>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
                 </select>
               </label>
               <input type="submit" value="Select" />
             </form>
-            {submitted && <h3> Your selection is {cryptid}</h3>}
+            {submitted && <h3> Your selection is {rotorOrder}</h3>}
             {submitted && (
               <input
                 type="text"
@@ -435,7 +433,7 @@ function Decrypt() {
               <br />
             </p>
             <h3 className="encrypted-message">
-              Your {submitted && `${cryptid}`} decrypted message:{' '}
+              Your {submitted && `${rotorOrder}`} decrypted message:{' '}
               {completeDecode}
             </h3>
           </div>
