@@ -334,7 +334,7 @@ function Encrypt() {
                 <h4 className="encoded-heading">Select rotor order:</h4>
                 <select
                   className="encoded-numbers"
-                  value={rotorOrder}
+                  value={letter}
                   onChange={handleChange}>
                   <option value="A">A</option>
                   <option value="B">B</option>

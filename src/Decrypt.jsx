@@ -345,7 +345,7 @@ function Decrypt() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    let selectedOrder = rotorOrder[order]
+    let selectedOrder = rotorOrder[letter]
     setOrder(selectedOrder)
     isSubmitted(true)
     console.log(letter)
@@ -378,7 +378,7 @@ function Decrypt() {
             <form onSubmit={handleSubmit}>
               <label>
                 <h4 className="encoded-heading">Select rotor order:</h4>
-                <select value={rotorOrder} onChange={handleChange}>
+                <select value={letter} onChange={handleChange}>
                   <option value="A">A</option>
                   <option value="B">B</option>
                   <option value="C">C</option>
