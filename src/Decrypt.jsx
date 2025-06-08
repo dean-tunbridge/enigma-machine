@@ -387,7 +387,7 @@ function Decrypt() {
               </label>
               <input type="submit" value="Select" />
             </form>
-            {submitted && <h3> Your selection is {rotorOrder}</h3>}
+            {submitted && <h3> Your selection is {letter}</h3>}
             {submitted && (
               <input
                 type="text"
@@ -433,7 +433,7 @@ function Decrypt() {
               <br />
             </p>
             <h3 className="encrypted-message">
-              Your {submitted && `${rotorOrder}`} decrypted message:{' '}
+              Your {submitted && `${letter}`} decrypted message:{' '}
               {completeDecode}
             </h3>
           </div>

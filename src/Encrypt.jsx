@@ -388,7 +388,7 @@ function Encrypt() {
               <br />
             </p>
             <h3 className="encrypted-message">
-              Your {submitted && `${rotorOrder}`} encrypted message:{' '}
+              Your {submitted && `${letter}`} encrypted message:{' '}
               {completeEncode}
             </h3>
           </div>
