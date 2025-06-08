@@ -299,7 +299,7 @@ function Decrypt() {
       rotorSixReverse,
       messageEncodeReverse,
     ],
-    nessie: [
+    B: [
       encodedMessageReverse,
       rotorSixReverse,
       rotorFiveReverse,

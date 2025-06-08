@@ -240,7 +240,7 @@ function Encrypt() {
     _: '_',
   }
 
-  // --  CRYPTID ROTOR ORDER -- //
+  // -- ROTOR ORDER -- //
 
   const rotorOrder = {
     A: [
@@ -253,7 +253,7 @@ function Encrypt() {
       rotorSix,
       encodedMessage,
     ],
-    nessie: [
+    B: [
       messageEncode,
       rotorSix,
       rotorFive,
@@ -288,7 +288,7 @@ function Encrypt() {
   // -- USE STATE -- //
   const [order, setOrder] = useState([])
   const [message, setMessage] = useState('')
-  const [cryptid, setCryptid] = useState('A')
+  const [letter, setLetter] = useState('A')
   const [submitted, isSubmitted] = useState(false)
 
   function updateMessage(newMessage) {
@@ -298,16 +298,16 @@ function Encrypt() {
   // -- DROP DOWN MENU -- //
 
   function handleChange(event) {
-    setCryptid(event.target.value)
+    setLetter(event.target.value)
     isSubmitted(false)
   }
 
   function handleSubmit(e) {
     e.preventDefault()
-    let selectedOrder = rotorOrder[cryptid] || []
+    let selectedOrder = rotorOrder[letter] || []
     setOrder(selectedOrder)
     isSubmitted(true)
-    console.log(cryptid)
+    console.log(letter)
     // console.log(order)
   }
 
@@ -331,22 +331,20 @@ function Encrypt() {
             <h2 className="component-inner-title">Encrypting message</h2>
             <form className="form" onSubmit={handleSubmit}>
               <label>
-                <h4 className="encoded-heading">
-                  Pick a super secret password:
-                </h4>
+                <h4 className="encoded-heading">Select rotor order:</h4>
                 <select
                   className="encoded-numbers"
-                  value={cryptid}
+                  value={rotorOrder}
                   onChange={handleChange}>
                   <option value="A">A</option>
-                  <option value="nessie">B</option>
+                  <option value="B">B</option>
                   <option value="C">C</option>
                   <option value="D">D</option>
                 </select>
               </label>
               <input type="submit" value="Select" />
             </form>
-            {submitted && <h3> Your selection is {cryptid}</h3>}
+            {submitted && <h3> Your selection is {letter}</h3>}
             {submitted && (
               <input
                 type="text"
@@ -390,7 +388,7 @@ function Encrypt() {
               <br />
             </p>
             <h3 className="encrypted-message">
-              Your {submitted && `${cryptid}`} encrypted message:{' '}
+              Your {submitted && `${rotorOrder}`} encrypted message:{' '}
               {completeEncode}
             </h3>
           </div>
