@@ -332,23 +332,23 @@ function Decrypt() {
   }
 
   // -- USE STATE -- //
-  const [cryptid, setCryptid] = useState('A')
+  const [letter, setLetter] = useState('A')
   const [order, setOrder] = useState([])
   const [message, setMessage] = useState('')
   const [submitted, isSubmitted] = useState(false)
 
   // -- EVENT HANDLERS -- //
   function handleChange(event) {
-    setCryptid(event.target.value)
+    setLetter(event.target.value)
     isSubmitted(false)
   }
 
   function handleSubmit(e) {
     e.preventDefault()
-    let selectedOrder = rotorOrder[cryptid]
+    let selectedOrder = rotorOrder[order]
     setOrder(selectedOrder)
     isSubmitted(true)
-    console.log(cryptid)
+    console.log(letter)
     // console.log(order)
   }
 
